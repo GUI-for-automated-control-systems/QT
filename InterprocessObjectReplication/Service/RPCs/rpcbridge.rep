@@ -1,0 +1,7 @@
+class RPCBridge
+{
+    ENUM ServiceState {Stopped = 0x0, Running = 0x1}
+    PROP(int serviceState = 0 READONLY)
+    PROP(bool collectData = false READWRITE)
+    SIGNAL(dataReady(const QByteArray& data))
+}
