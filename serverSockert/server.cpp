@@ -1,10 +1,12 @@
 #include <server.h>
 
 Server::Server()
-{
-    if(this->listen(QHostAddress::Any, 2323))
+{\
+    QHostAddress ipAddress("127.0.0.1");
+
+    if(this->listen(ipAddress, 2323))
     {
-        qDebug() << "start";
+        qDebug() << "Server started";
     }
     else
     {
